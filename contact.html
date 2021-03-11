@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chest.html">Chest</a></li>
+        <li><a href="shoulders.html">Shoulders</a></li>
+        <li><a href="back.html">Back</a></li>
+        <li><a href="legs.html">Legs</a></li>
+        <li><a href="biceps.html">Biceps</a></li>
+        <li><a href="triceps.html">Triceps</a></li>
+      </ul>
+    <h2>Contact Information</h2>
+    <ul>
+        <li>Phone Number: (123)-456-7890</li>
+        <li>Email Address: lhitchcock1@babson.edu</li>
+    </ul>
+    <h2>Feedback Form</h2>
+    <form>
+        <div>
+            <label for="Last Name">Last Name:</label>
+            <input
+              type="text"
+              id="lastname"
+              name="Last Name"
+              maxlength="50"
+              placeholder="Last name"
+            />
+             </div>
+        <div>
+                  <label for="First Name">First Name:</label>
+            <input
+              type="text"
+              id="firstname"
+              name="First Name"
+              maxlength="50"
+              placeholder="First name"
+            />
+              </div>
+        <div>
+            <label for="Email">Email:</label>
+            <input
+              type="text"
+              id="Email"
+              name="email"
+              maxlength="50"
+              placeholder="Email address"
+            />
+            <div>
+              Gender:
+              <label
+                >Male
+                <input type="radio" name="gender" value="male" />
+              </label>
+              <label
+                >Female
+                <input type="radio" name="gender" value="female" />
+              </label>
+            </div>
+        </div>
+          <div>
+            <label for="grade">What is your favorite body part to work out?</label>
+          </div>
+          <div>
+            <select name="bodypart" id="bodypart">
+              <option value="chest">Chest</option>
+              <option value="shoulders">Shoulders</option>
+              <option value="back">Back</option>
+              <option value="legs">Legs</option>
+              <option value="biceps">Biceps</option>
+              <option value="triceps">Triceps</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label for="comments">Leave Feedback</label>
+          </div>
+          <div>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="25"
+              rows="5"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+        </div>
+        <button type="submit" name="submit-button"> <img src="images/mailbox.png" alt="submit-button" height="30"></button>
+        <button type="reset" name="reset"> <img src="images/reset.png" alt="reset" height="30"></button>
+      </form>
+      <br>
+    <hr>
+    <a href="sitemap.html">Sitemap</a>
+    <br>
+    <a href="index.html"><img src="images/home.jpg" alt="home" width="50"></a>
+</body>
+</html>
