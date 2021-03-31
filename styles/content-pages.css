@@ -1,0 +1,62 @@
+h1 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+#nav {
+    float: left;
+}
+#navlink {
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    
+}
+#navbar {
+    background-color: #333;
+    list-style-type: none;
+    overflow: hidden;
+
+}
+#nav:hover {
+    font-weight: bold;
+}
+a:hover {
+    font-weight: bold;
+}
+body {
+    background-color: wheat;
+}
+table, th, td {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    
+}
+#topline {
+    text-align: center;
+    font-weight: bold;
+    font-size:x-large;
+}
+.cent {
+    text-align: center;
+}
+hr {
+    border: 1px solid black;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+button {
+    background-color: lightgrey;
+}
+.butt {
+    text-align: center;
+}
+#sitemap {
+    text-align: left;
+}

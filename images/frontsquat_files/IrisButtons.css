@@ -1,0 +1,116 @@
+/* Fonts */
+@font-face {
+  font-family: 'irisGlyph';
+  src: url("./fonts/irisGlyph.eot");
+  src: url("./fonts/irisGlyph.eot?#iefix") format("embedded-opentype"), url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAASoAA4AAAAACcAAAARLAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GVgCCahEICoVAhEABNgIkA1QLLAAEIAWESgeBPD93ZWJmBhsbCMgusG3YkxUrddt1cVFcuLjf59/AAsueftPmrUCyJA7Uzkz1j9IzEf/5/dUZME1iukO994dppTSC8paClFXKmoAaa3vy0jQUg0aki3gXDVEsQkgQ+ZIIWUPU9EOlc3nq8WyRXEAimot4xHcnf1+8wN3Urr5ecTz/x1Kvi49S8BT/VVMFRTclYWLG8vkGNvAjmfNEp2Jds+NT0lYABIBTe38Xm369yGarW+h26kd8ABvAEGISEaHPABT+U0KBiJPZNcBM9nz6xUIZYGSCcrXWfvl2OHHa/0cAQDNTMgYXAK5rksWg7VQk/gapSoAAD0YDlGuqZk6qpf/z/z8ASjdBR/7vv/7xc3/fp29Vxg1QsSs9xbnUKPVLN8LfzbPUQHb6/z9ruLU/C0AHuADViF9o2AlokploLqC+PhSSno6O0S8ZMcmRVP31+9ND+r48ti02TRZst3+gNa+Pm5ela8usvticNql1jn2BUvPmmfRT/VFO1nWzbHCzS45siL+KGd3gzjDWLzb9onU2ebjVGmXJp/SQaEvUcOPUjJhxXBk/LIUpBnfClLBu1L5xRYZhRcy41F622JtrnafUlAU2/66h69ZznHTrnPSiQ+tiD9boeo1Gb1xqhyUbVDx7zNBbpYTB26sU2Y6vGj30CjrEDqIjI58h1WhS/odo24oyY+3eacdVrWj1M4wMVwiwXLTmn/hgZW4wjckY/7+Lk0fs1F92wX5icseBtoO0usP0b10jb6tFOguWKldetW7ZrbixqNUu3rRWstJlc7e/VONdKm2OH9Rxq7B3qFKoPKlhbMKqGa+wF3sSmWq1yTuuSkU2yDAiXD4QTSte8/X0VpErt3rm1Yhc7Rd332kw1dWeGHyYte3AUoT5/sjQ7zVXK1RPBERNSHW4xNwZBavIO4QtUNPRO6nZaa7nLPDabTAv93m8H9NPchYEcnabN8Yvymu9Hk98eTYf58L4eDeKmtiOo8debMtgsa8e47jUviKFAPh7+oJ7K6lRc/NH8/czZbCyrNool583Q74MS/QK0VPgz2CXjgH4BFajdDDgDID8CH2C/kZqtxRGsIMBFAV4PfYDQMAOJJS9t0Hsm4kpicFmAkqwOdMDW0inzpZsj2yN6dmpNGibbcgQMvMStIF9GcEwzL4CZejFugp1GPSmm0l8uMGUjqmOpYY1PtJGmg7ItbGDuX6adWmgd69gZpLSdHo2xhq5DeP9qI4q2zbA8wdmpkiIX1BqcqSxK1s9TAQwd5EOkDgzQa5aFJZUjNXADJmn+4Y6Wkzln13s2lxCgOvXLWv1a7WiyEHXzJGOEH4l7EHIAoQRRKsg4UMTqlCaIihuixrp6Jib1RG2Ix1bIklZ2MwZQNiz9D+ZQFG+3gIQJh0bO0eIxEmQJI108pCXFBnkIz8FKKj379E5Ty6S2MgQkiE5UkCGkRFkFBlDxhGnBHaFCAM+vixE27smNQUAAA==) format("woff2"), url(data:application/font-woff;charset=utf-8;base64,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) format("woff"), url("./fonts/irisGlyph.ttf") format("truetype"), url("./fonts/irisGlyph.svg#irisGlyph") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Font Glyphs */
+
+div[id$="thumbs_down"]:before,
+.iris-thumbsDown:before {
+  content: '\0041'; }
+
+div[id$="thumbs_up"]:before,
+.iris-thumbsUp:before {
+  content: '\0042'; }
+
+div[id$="skip_back"]:before,
+.iris-skipBackward:before {
+  content: '\0043'; }
+
+div[id$="skip_forward"]:before,
+.iris-skipForward:before {
+  content: '\0044'; }
+
+/* Basic Styles */
+
+div[id$="thumbs_up"],
+div[id$="thumbs_down"],
+div[id$="skip_forward"],
+div[id$="skip_back"] {
+  opacity: .9;
+  background: rgba(0,0,0,.6);
+  border-radius: 100%;
+  padding: .5em ;
+  margin: .125em;
+  font-family: 'irisGlyph';
+}
+
+div[id$="thumbs_up"]:hover,
+div[id$="thumbs_down"]:hover,
+div[id$="skip_forward"]:hover,
+div[id$="skip_back"]:hover {
+    opacity: 1;
+}
+
+.ib,
+.irisIcon:before {
+  display: inline-block;
+  font-family: 'irisGlyph';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.irisIcon img {
+  display: none;
+}
+
+.ib {
+    border-radius: 100%;
+    color: white;
+    padding: .75em;
+    line-height: 1em;
+    margin: 0 .125em;
+    width: 1em;
+    height:1em;
+}
+
+.ib-ctrl {
+  z-index: 1000;
+  position: absolute;
+}
+.ib-ctrl.top {
+  top: 0.5em;
+}
+.ib-ctrl.right {
+  right: 0.5em;
+}
+.ib-ctrl.bottom {
+  bottom: 4em;
+}
+.ib-ctrl.left {
+  left: .5em;
+}
+.ib-ctrl.tall {
+  width: 4em;
+}
+
+.ibHide {
+  display: none !important;
+}
+
+.ib,
+.iris-skipBackward,
+.iris-skipForward,
+.iris-thumbsDown,
+.iris-thumbsUp {
+  display: inline-block;
+}
+
+/* Layout */
+
+.vjs-thumbs-up-button > div,
+.vjs-thumbs-down-button > div,
+.vjs-skip-forward-button > div,
+.vjs-skip-backward-button > div {
+  height: 100%; }
+
+.vjs-thumbs-up-button > div > a,
+.vjs-thumbs-down-button > div > a,
+.vjs-skip-forward-button > div > a,
+.vjs-skip-backward-button > div > a {
+  height: 100%;
+  color: inherit;
+  cursor: pointer; }

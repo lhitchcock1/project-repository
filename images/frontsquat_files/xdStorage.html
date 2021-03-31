@@ -1,0 +1,111 @@
+
+<!-- saved from url=(0059)https://d160accw6snlyf.cloudfront.net/public/xdStorage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body data-new-gr-c-s-check-loaded="14.998.0" data-gr-ext-installed="">
+<script type="text/javascript">
+	var genId, cid, id, idCheck;
+	var clientId = "-1";
+	var attempts = [];
+
+	function s4() {
+		return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+	};
+	function guid() {
+		return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+	}
+
+	function getCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while(c.charAt(0)==' ') c = c.substring(1, c.length);
+			if(c.indexOf(nameEQ) === 0) {
+				if(navigator.cookieEnabled) {
+					return c.substring(nameEQ.length, c.length);
+				} else {
+					TheTake.util.setCookie(name, -1, false, 0); // remove cookie if it was set inappropriately
+					return -1;
+				}
+			}
+		}
+		return -1;
+	}
+
+	function setCookie(name, val, expireNumDays) {
+		if(navigator.cookieEnabled) {
+			var expires = "";
+			var date = new Date();
+			if(typeof expireNumDays === "undefined") {
+				expireNumDays === 5*365;
+			}
+			date.setTime(date.getTime()+(expireNumDays*24*60*60*1000));
+			expires = "; expires="+date.toGMTString();
+			document.cookie = name+"="+val+expires+"; path=/";
+		}
+	}
+
+	try {
+		genId = guid();
+		attempts.push(["try", "getItem:clientId"]);
+		id = localStorage.getItem("clientId");
+		attempts.push(["result", "getItem:clientId", id]);
+
+		if(!id) {
+			id = genId;
+			attempts.push(["try", "setItem:clientId", id]);
+			localStorage.setItem("clientId", id);
+			attempts.push(["try", "getItem:clientId"]);
+			idCheck = localStorage.getItem("clientId");
+			attempts.push(["result", "getItem:clientId", idCheck]);
+
+			if(idCheck !== id) {
+				throw ("Couldn't read back client ID after writing to local storage");
+			}
+		}
+
+		clientId = id;
+	} catch(e) {
+		cid = -1;
+		attempts.push(["error", "localStorage failed", e, genId]);
+
+		try {
+			attempts.push(["try", "getCookie:clientId"]);
+			cid = getCookie("clientId");
+			attempts.push(["result", "getCookie:clientId", cid]);
+		} catch(e) {
+			attempts.push(["error", "Read cookie failed", e, genId]);
+		}
+
+		if(cid === -1) {
+			try {
+				cid = genId;
+				attempts.push(["try", "setCookie:clientId", cid]);
+				setCookie("clientId", cid);
+				attempts.push(["try", "getCookie:clientId"]);
+				idCheck = getCookie("clientId");
+				attempts.push(["result", "getCookie:clientId", idCheck]);
+				if(idCheck !== cid) {
+					throw ("Couldn't read back client ID after writing to cookie");
+				}
+				clientId = cid;
+			} catch(e) {
+				attempts.push(["error", "Set cookie failed", e, cid]);
+			}
+		} else {
+			clientId = cid;
+		}
+	}
+
+	window.parent.postMessage(clientId, "*");
+
+	var url = (window.location != window.parent.location)
+			? document.referrer
+			: document.location.search;
+	if(url.indexOf("ttdev=") >= 0 || document.location.host.indexOf("localhost") >= 0 || document.location.host.indexOf("thetake-dev.ngrok.io") >= 0) {
+		console.log("[TT] Cross Domain Client ID: " + clientId, attempts);
+	}
+</script>
+
+</body></html>

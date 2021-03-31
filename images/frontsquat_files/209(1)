@@ -1,0 +1,51 @@
+!function(w, d){
+    function imgSrcToElement(src, type, d) {
+        var img = d.createElement('img');
+        img.height = 1;
+        img.width = 1;
+        img.style.display = 'none';
+        img.src = src;
+        img.alt = '';
+        return img;
+    }
+    function scriptSrcToElement(w, d, t, u) {
+        var a = d.createElement(t);
+        a.async = true;
+        a.crossorigin = 'anonymous';
+        a.src = u;
+        var s = d.getElementsByTagName(t)[0];
+        s.parentNode.insertBefore(a, s);
+    }
+    (function (d) {
+        var pixels = JSON.parse('[]');
+        pixels.forEach(function (pixel_with_type) {
+            var t = pixel_with_type[0];
+            var p = pixel_with_type[1];
+            if (t === 'fplus' || t === 'halo') {
+                scriptSrcToElement(w, d, 'script', p);
+            } else {
+                var img = imgSrcToElement(p, t, d);
+                d.body.appendChild(img);
+            }
+        })
+    })(d);
+    (function (w, d, t, u) {
+        w.auvars = w.auvars || {};
+        w.auvars['209'] = {
+            t: 'bbcbb1a2b89e5f9fdad90d02c6a16c47',
+            p: '209',
+            a: '030134qis507jv2yg08xizqr0bwpa1w0evvljz0yt1mu700a4bjg0ntek210qskvk40trr7270wqxik90zq3u2d12pa5j31727x3p18nmsj90pr1cyr1elzfjf1hl5r1i1kkc2jl',
+            ty: 'passive',
+            hpx: JSON.parse('[["openx", "https://u.openx.net/w/1.0/cm?id=998eaf06-9905-4eae-9e26-9fac75960c53&r=https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Fopenx%3Fopenx_id%3D%7BOPENX_ID%7D%26id%3D{haloid}%26auid%3D{auid}"]]'),
+        };
+        w.auvars.t = 'bbcbb1a2b89e5f9fdad90d02c6a16c47';
+        w.auvars.p = '209';
+        w.auvars.a = '030134qis507jv2yg08xizqr0bwpa1w0evvljz0yt1mu700a4bjg0ntek210qskvk40trr7270wqxik90zq3u2d12pa5j31727x3p18nmsj90pr1cyr1elzfjf1hl5r1i1kkc2jl';
+        w.auvars.ty = 'passive';
+        var a = d.createElement(t);
+        a.defer = true;
+        a.src = u;
+        var s = d.getElementsByTagName(t)[0];
+        s.parentNode.insertBefore(a, s);
+    })(w, d, 'script', 'https://p.ad.gt/api/v1/p/209');
+}(window, document);
