@@ -60,3 +60,13 @@ button {
 #sitemap {
     text-align: left;
 }
+#abs {
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#caption {
+    font-size: large;
+    font-weight: bold;
+}

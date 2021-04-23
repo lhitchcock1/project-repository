@@ -17,6 +17,8 @@
         <li id="nav"><a id="navlink" href="legs.html">Legs</a></li>
         <li id="nav"><a id="navlink" href="biceps.html">Biceps</a></li>
         <li id="nav"><a id="navlink" href="triceps.html">Triceps</a></li>
+        <li id="nav"><a id="navlink" href="abs.html">Abs</a></li>
+        <li id="nav"><a id="navlink" href="max.html">One Rep Max Calculator</a></li>
       </ul>
     </div>
     <h1>Shoulder Exercises</h1>
@@ -30,6 +32,7 @@
       <tr>
         <td>
           <img
+            id="pic1"
             src="images/dbshoulderpress.jpg"
             alt="dbpress"
             title="dbpress"
@@ -46,14 +49,22 @@
           </ul>
         </td>
         <td class="butt">
-          <button><a href="https://www.youtube.com/watch?v=qEwKCR5JCog"
-            >Demonstration</a
-          ></button>
+          <button>
+            <a href="https://www.youtube.com/watch?v=qEwKCR5JCog"
+              >Demonstration</a
+            >
+          </button>
         </td>
       </tr>
       <tr>
         <td>
-          <img src="images/shrugs.jpg" alt="shrug" title="shrug" width="300" />
+          <img
+            id="pic2"
+            src="images/shrugs.jpg"
+            alt="shrug"
+            title="shrug"
+            width="300"
+          />
         </td>
         <td class="cent">Barbell Shrugs</td>
         <td>
@@ -65,14 +76,17 @@
           </ul>
         </td>
         <td class="butt">
-          <button><a href="https://www.youtube.com/watch?v=NAqCVe2mwzM"
-            >Demonstration</a
-          ></button>
+          <button>
+            <a href="https://www.youtube.com/watch?v=NAqCVe2mwzM"
+              >Demonstration</a
+            >
+          </button>
         </td>
       </tr>
       <tr>
         <td>
           <img
+            id="pic3"
             src="images/dblatraise.jpg"
             alt="latraise"
             title="latraise"
@@ -88,14 +102,17 @@
           </ul>
         </td>
         <td class="butt">
-          <button><a href="https://www.youtube.com/watch?v=3VcKaXpzqRo"
-            >Demonstration</a
-          ></button>
+          <button>
+            <a href="https://www.youtube.com/watch?v=3VcKaXpzqRo"
+              >Demonstration</a
+            >
+          </button>
         </td>
       </tr>
       <tr>
         <td>
           <img
+            id="pic4"
             src="images/frontraise.jpg"
             alt="frontraise"
             title="frontraise"
@@ -111,9 +128,11 @@
           </ul>
         </td>
         <td class="butt">
-          <button> <a href="https://www.youtube.com/watch?v=-t7fuZ0KhDA"
-            >Demonstration</a 
-          > </button>
+          <button>
+            <a href="https://www.youtube.com/watch?v=-t7fuZ0KhDA"
+              >Demonstration</a
+            >
+          </button>
         </td>
       </tr>
     </table>
@@ -122,7 +141,48 @@
     <div><a href="contact.html">Contact Page</a></div>
     <a href="sitemap.html">Sitemap</a>
     <br />
-    <br>
+    <br />
     <a href="index.html"><img src="images/home.jpg" alt="home" width="50" /></a>
+
+    <script>
+      function enlarge(imageID) {
+        let image = document.getElementById(imageID);
+        let w = image.width;
+        w = w * 1.5;
+        image.width = w;
+      }
+
+      function decrease(imageID) {
+        let image = document.getElementById(imageID);
+        let w = image.width;
+        w = w / 1.5;
+        image.width = w;
+      }
+
+      document.getElementById("pic1").onmouseover = function () {
+        enlarge("pic1");
+      };
+      document.getElementById("pic1").onmouseout = function () {
+        decrease("pic1");
+      };
+      document.getElementById("pic2").onmouseover = function () {
+        enlarge("pic2");
+      };
+      document.getElementById("pic2").onmouseout = function () {
+        decrease("pic2");
+      };
+      document.getElementById("pic3").onmouseover = function () {
+        enlarge("pic3");
+      };
+      document.getElementById("pic3").onmouseout = function () {
+        decrease("pic3");
+      };
+      document.getElementById("pic4").onmouseover = function () {
+        enlarge("pic4");
+      };
+      document.getElementById("pic4").onmouseout = function () {
+        decrease("pic4");
+      };
+    </script>
   </body>
 </html>

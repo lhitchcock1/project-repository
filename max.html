@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/contact.css" />
+  </head>
+  <body>
+    <div>
+      <ul id="navbar">
+        <li id="nav"><a id="navlink" href="index.html">Home</a></li>
+        <li id="nav"><a id="navlink" href="chest.html">Chest</a></li>
+        <li id="nav"><a id="navlink" href="shoulders.html">Shoulders</a></li>
+        <li id="nav"><a id="navlink" href="back.html">Back</a></li>
+        <li id="nav"><a id="navlink" href="legs.html">Legs</a></li>
+        <li id="nav"><a id="navlink" href="biceps.html">Biceps</a></li>
+        <li id="nav"><a id="navlink" href="triceps.html">Triceps</a></li>
+        <li id="nav"><a id="navlink" href="abs.html">Abs</a></li>
+        <li id="nav">
+          <a id="navlink" href="max.html">One Rep Max Calculator</a>
+        </li>
+      </ul>
+      <form id="form" action="">
+        <label for="weight">Weight:</label>
+        <input type="text" id="weight" name="weight"/>
+        <label for="reps">Reps:</label>
+        <input type="text" id="reps" name="reps" />
+        <div>
+            <label for="max">1 Rep Max:</label>
+            <input type="text" id="max" name="max">
+        </div>
+        <br>
+        <button id="submit" type="submit" name="submit-button"> <img src="images/mailbox.png" alt="submit-button" height="30"></button>
+        <button type="reset" name="reset"> <img src="images/reset.png" alt="reset" height="30"></button>
+      </form>
+    </div>
+    <br />
+    <hr />
+    <div><a href="contact.html">Contact Page</a></div>
+    <a href="sitemap.html">Sitemap</a>
+    <br />
+    <a href="index.html"><img src="images/home.jpg" alt="home" width="50" /></a>
+
+    <script>
+        function rpm() {
+            const myForm = document.getElementById("form");
+            let weight = myForm["weight"];
+            let reps = myForm["reps"];
+            let max = myForm["max"];
+
+            if (weight.value.length == 0 || reps.value.length == 0 ) {
+                alert("Please fill in all fields");
+            } else if (isNaN(weight.value)) {
+                alert("Please input only numbers")
+            }
+
+            max.value = (weight.value / (1.0278 - 0.0278 * reps.value)).toFixed(2);
+
+            return false
+
+        }
+
+        document.getElementById("submit").onclick = rpm;
+    </script>
+  </body>
+</html>

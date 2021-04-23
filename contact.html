@@ -17,16 +17,18 @@
       <li id="nav"><a id="navlink" href="legs.html">Legs</a></li>
       <li id="nav"><a id="navlink" href="biceps.html">Biceps</a></li>
       <li id="nav"><a id="navlink" href="triceps.html">Triceps</a></li>
+      <li id="nav"><a id="navlink" href="abs.html">Abs</a></li>
+      <li id="nav"><a id="navlink" href="max.html">One Rep Max Calculator</a></li>
     </ul>
   </div>
-  <div id="div">
     <h2>Contact Information</h2>
     <ul>
-        <li>Phone Number: (123)-456-7890</li>
-        <li>Email Address: lhitchcock1@babson.edu</li>
+        Phone Number: (123)-456-7890
+        <br>
+        Email Address: lhitchcock1@babson.edu
     </ul>
     <h2>Feedback Form</h2>
-    <form>
+    <form id="form">
         <div>
             <label for="Last Name">Last Name:</label>
             <input
@@ -54,7 +56,7 @@
               id="Email"
               name="email"
               maxlength="50"
-              placeholder="Email address"
+              placeholder="Email"
             />
             <div>
               Gender:
@@ -96,16 +98,40 @@
             ></textarea>
           </div>
         </div>
-        <button type="submit" name="submit-button"> <img src="images/mailbox.png" alt="submit-button" height="30"></button>
+        <button id="submit" type="submit" name="submit-button"> <img src="images/mailbox.png" alt="submit-button" height="30"></button>
         <button type="reset" name="reset"> <img src="images/reset.png" alt="reset" height="30"></button>
-      </form>
+      </div>
+    </form>
       <br>
-    </div>
+    <div id="title"></div>
       <br>
     <hr>
     <a href="sitemap.html">Sitemap</a>
     <br>
     <br>
     <a href="index.html"><img src="images/home.jpg" alt="home" width="50"></a>
+
+    <script>
+
+      function form() {
+        const myForm = document.getElementById("form");
+
+        if (myForm["email"].value.length == 0 || myForm["Last name"].value.length == 0 || myForm["First name"].value.length == 0 || myForm["comments"].value.length == 0) {
+          alert("Please make sure all items are filled");
+          console.log("test");
+        }
+      
+        let title = document.getElementById("title");
+        title.innerHTML = "Thanks for submitting!"
+        title.style.color = "blue";
+        title.style.fontSize = "large";
+        title.style.textAlign = "center";
+      }
+
+      document.getElementById("submit").onclick = form;
+      
+
+
+    </script>
 </body>
 </html>

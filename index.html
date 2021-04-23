@@ -44,10 +44,12 @@
         <li id="nav"><a id="navlink" href="legs.html">Legs</a></li>
         <li id="nav"><a id="navlink" href="biceps.html">Biceps</a></li>
         <li id="nav"><a id="navlink" href="triceps.html">Triceps</a></li>
+        <li id="nav"><a id="navlink" href="abs.html">Abs</a></li>
+        <li id="nav"><a id="navlink" href="max.html">One Rep Max Calculator</a></li>
       </ul>
     </div>
     <h1>Workout Exercises</h1>
-    <p>
+    <p id="par">
       This website aims to outline serveral exercises for each body part to
       provide a direction for novice members in the gym.
     </p>
@@ -56,6 +58,7 @@
         <td>
           <a href="chest.html"
             ><img
+            id="chest1"
               src="images/chest.jpg"
               alt="chest"
               title="chest"
@@ -66,6 +69,7 @@
         <td>
           <a href="shoulders.html"
             ><img
+              id="pic2"
               src="images/shoulders.jpg"
               alt="shoulders"
               title="shoulders"
@@ -76,6 +80,7 @@
         <td>
           <a href="legs.html"
             ><img
+              id="pic3"
               src="images/legs.jpg"
               alt="legs"
               title="legs"
@@ -93,6 +98,7 @@
         <td>
           <a href="biceps.html"
             ><img
+              id="pic4"
               src="images/biceps.jpg"
               alt="biceps"
               title="biceps"
@@ -103,6 +109,7 @@
         <td>
           <a href="triceps.html"
             ><img
+              id="pic5"
               src="images/triceps.jpg"
               alt="triceps"
               title="triceps"
@@ -113,6 +120,7 @@
         <td>
           <a href="back.html"
             ><img
+              id="pic6"
               src="images/back.jpg"
               alt="back"
               title="back"
@@ -131,5 +139,73 @@
     <hr />
     <div><a id="bottom" href="contact.html">Contact Page</a></div>
     <a id="bottom" href="sitemap.html">Sitemap</a>
+
+    <script>
+      function border(imgID) {
+        let pic = document.getElementById(imgID);
+        let par = document.getElementById("par");
+        pic.style.border = "5px solid red";
+        par.innerHTML = "Click on pictures to see exercises"
+      }
+
+      function unborder(imgID) {
+        let pic = document.getElementById(imgID);
+        let par = document.getElementById("par");
+        pic.style.border = "";
+        par.innerHTML = "This website aims to outline serveral exercises for each body part to provide a direction for novice members in the gym"
+    
+      }
+
+      document.getElementById("chest1").onmouseover = function () {
+        border("chest1");
+      }
+
+      document.getElementById("chest1").onmouseout = function () {
+        unborder("chest1");
+      }
+
+      document.getElementById("pic2").onmouseover = function () {
+        border("pic2");
+      }
+
+      document.getElementById("pic2").onmouseout = function () {
+        unborder("pic2");
+      }
+
+      document.getElementById("pic3").onmouseover = function () {
+        border("pic3");
+      }
+
+      document.getElementById("pic3").onmouseout = function () {
+        unborder("pic3");
+      }
+
+      document.getElementById("pic4").onmouseover = function () {
+        border("pic4");
+      }
+
+      document.getElementById("pic4").onmouseout = function () {
+        unborder("pic4");
+      }
+
+      document.getElementById("pic5").onmouseover = function () {
+        border("pic5");
+      }
+
+      document.getElementById("pic5").onmouseout = function () {
+        unborder("pic5");
+      }
+
+      document.getElementById("pic6").onmouseover = function () {
+        border("pic6");
+      }
+
+      document.getElementById("pic6").onmouseout = function () {
+        unborder("pic6");
+      }
+
+      
+    </script>
+    
   </body>
 </html>
